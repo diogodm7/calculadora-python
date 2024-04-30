@@ -31,3 +31,5 @@ while True:
     else:
         resposta = funcsoma(valor1, valor2)
         print(valor1, "+", valor2, "=", resposta)
+
+    print("uso da git")
