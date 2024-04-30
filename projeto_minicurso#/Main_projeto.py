@@ -1,3 +1,5 @@
+import pandas as pd
+
 #importar base de dados 
 
 #visualizar base de dados 
