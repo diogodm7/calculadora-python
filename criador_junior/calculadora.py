@@ -51,8 +51,15 @@ while True:
 
         print(valor3, "-", valor4, "=", resposta4)
         
-    
+    elif resultado == "5":
+         
+        valor9 = float(input("diga a base: "))
+        
+        valor10 = float(input("diga o expoente: "))
 
+        resposta5 = potencia(valor9, valor10)
+        
+        print(valor9, "^", valor10, "=", resposta5)
     else: 
 
         valor1 = float(input("diga a primeira parcela: "))
