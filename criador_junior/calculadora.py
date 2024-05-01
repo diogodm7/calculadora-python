@@ -18,26 +18,16 @@ while True:
 
     resultado = input("para somar digite 1, multiplicar 2, dividir 3: ")
 
-
-    
-    
-    valor3 =  float(input("diga o minuendo: "))
-
-    valor4 = float(input("diga o subtraendo: "))
-
-
-
-    
     
     if resultado == "2":
 
         valor5 = float(input("diga o multiplicado: "))
 
-        valor6 = float(input("diga o multiplicador"))
+        valor6 = float(input("diga o multiplicador: "))
 
-        valor1 = float(input("diga a primeira parcela: "))
-        resposta2 = multiplicacao(valor1, valor2)
-        print(valor1, "x", valor2, "=", resposta2)
+        resposta2 = multiplicacao(valor5, valor6)
+
+        print(valor5, "x", valor6, "=", resposta2)
     
     elif resultado == "3":
              
@@ -45,8 +35,10 @@ while True:
 
         valor8 = float(input("diga o divisor: "))
 
-        resposta3 = divisao(valor1, valor2)
-        print(valor1, "/", valor2, "=", resposta3)
+        resposta3 = divisao(valor7, valor8)
+
+        print(valor7, "/", valor8, "=", resposta3)
+        
 
     else: 
 
@@ -55,6 +47,7 @@ while True:
         valor2 = float(input("diga a segunda parcela: "))
 
         resposta = funcsoma(valor1, valor2)
+        
         print(valor1, "+", valor2, "=", resposta)
 
     
