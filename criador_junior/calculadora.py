@@ -15,7 +15,7 @@ def subtracao(valor3, valor4):
 
 while True:
 
-    resultado = input("para somar digite 1, multiplicar 2, dividir 3: ")
+    resultado = input("para somar digite 1, multiplicar 2, dividir 3, subtrair 4: ")
 
     
     if resultado == "2":
@@ -37,6 +37,17 @@ while True:
         resposta3 = divisao(valor7, valor8)
 
         print(valor7, "/", valor8, "=", resposta3)
+
+    elif resultado == "4":
+        
+        valor3 = float(input("diga o minuedo: "))
+        
+        valor4 = float(input("diga o subtraendo: "))
+
+        resposta4 = subtracao(valor3, valor4)
+
+        print(valor3, "-", valor4, "=", resposta4)
+        
         
 
     else: 
