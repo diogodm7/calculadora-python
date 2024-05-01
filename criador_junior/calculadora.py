@@ -2,14 +2,17 @@
 def funcsoma(valor1, valor2):
     return valor1 + valor2 
 
-def multiplicacao(valor1, valor2):
-    return valor1 * valor2
+def multiplicacao(valor5, valor6):
+    return valor5 * valor6
 
-def divisao(valor1, valor2):
-    return valor1 / valor2
+def divisao(valor7, valor8):
+    return valor7 / valor8
 
 def subtracao(valor3, valor4):
     return valor3 - valor4
+
+def potencia(valor9, valor10):
+    return valor9 ** valor10
 
 #parte de ação 
 
@@ -48,7 +51,7 @@ while True:
 
         print(valor3, "-", valor4, "=", resposta4)
         
-        
+    
 
     else: 
 
