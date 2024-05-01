@@ -18,7 +18,9 @@ def potencia(valor9, valor10):
 
 while True:
 
-    resultado = input("para somar digite 1, multiplicar 2, dividir 3, subtrair 4: ")
+    print("digite 'fim' para sair")
+
+    resultado = input("para somar digite 1, multiplicar 2, dividir 3, subtrair 4, potencia 5: ")
 
     
     if resultado == "2":
@@ -60,6 +62,10 @@ while True:
         resposta5 = potencia(valor9, valor10)
         
         print(valor9, "^", valor10, "=", resposta5)
+    
+    elif resultado == "fim":
+        break
+
     else: 
 
         valor1 = float(input("diga a primeira parcela: "))
