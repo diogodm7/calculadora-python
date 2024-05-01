@@ -62,6 +62,10 @@ while True:
         resposta5 = potencia(valor9, valor10)
         
         print(valor9, "^", valor10, "=", resposta5)
+
+        if resultado == "fim":
+            break
+    
     
     elif resultado == "fim":
         break
