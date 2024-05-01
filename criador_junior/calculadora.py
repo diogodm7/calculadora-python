@@ -10,7 +10,8 @@ def divisao(valor1, valor2):
     return valor1 / valor2
 
 def subtracao(valor3, valor4):
-    return valor3 - valor4
+    return valor3, valor4
+
 #parte de ação 
 
 while True:
