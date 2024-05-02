@@ -4,11 +4,10 @@ import pandas as pd
 
 tabela_vendas = pd.read_excel("C:/Users/aspdiogo/Documents/workspace/projeto_minicurso/vendas.xlsx")
 
-print(tabela_vendas)
-
-#importar base de dados 
-
 #visualizar base de dados 
+
+pd.set_option('display.max_columns', None)
+print(tabela_vendas)
 
 #faturamento por loja 
 
