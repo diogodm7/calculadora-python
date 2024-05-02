@@ -14,13 +14,16 @@ def subtracao(valor3, valor4):
 def potencia(valor9, valor10):
     return valor9 ** valor10
 
+def portg(valor11, valor12):
+    return valor11 * valor12 / 100
+
 #parte de ação 
 
 while True:
 
     print("digite 'fim' para sair")
 
-    resultado = input("para somar digite 1, multiplicar 2, dividir 3, subtrair 4, potencia 5: ")
+    resultado = input("para somar digite 1, multiplicar 2, dividir 3, subtrair 4, potencia 5, porcentagem 6 : ")
 
     
     if resultado == "2":
@@ -63,9 +66,15 @@ while True:
         
         print(valor9, "^", valor10, "=", resposta5)
 
-        if resultado == "fim":
-            break
-    
+    elif resultado == "6":
+
+        valor11 = float(input("diga um número: "))
+
+        valor12 = float(input("diga a porcentagem quer saber: "))
+
+        resposta6 = portg(valor11, valor12)
+
+        print(valor11, "%", valor12, "=", resposta6)
     
     elif resultado == "fim":
         break
