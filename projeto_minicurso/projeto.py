@@ -1,5 +1,5 @@
 import pandas as pd
-
+import win32com.client as win32
 #importar base de dados 
 
 tabela_vendas = pd.read_excel("C:/Users/aspdiogo/Documents/workspace/projeto_minicurso/vendas.xlsx")
@@ -21,6 +21,8 @@ Quantidade = tabela_vendas[['ID Loja','Quantidade']].groupby('ID Loja').sum()
 
 print(Quantidade)
 
+print('-' * 50)
+
 #ticket médio por produto em cada loja
 
 ticket_medio = (faturamento['Valor Final'] / Quantidade['Quantidade']).to_frame()
@@ -28,3 +30,28 @@ ticket_medio = (faturamento['Valor Final'] / Quantidade['Quantidade']).to_frame(
 print(ticket_medio)
 
 #enviar email com relatório
+
+outlook = win32.Dispatch('outlook.application')
+mail = outlook.CreateItem(0)
+mail.To = 'diogominion7@gmail.com'
+mail.Subject = 'Relatório de Vendas de uma loja de testes'
+mail.HTMLBody = '''
+Prezados.
+
+Segue o relatório de vendas de cada loja que controlamos.
+
+Faturamento:
+{}
+
+Quantidade vendida:
+{}
+
+ticket médio dos produtos(faturamento por Quantidade) em cada loja:
+{}
+
+Qualquer dúvida estou a disposição.
+Att 
+Diogo
+'''
+
+mail.Send()
