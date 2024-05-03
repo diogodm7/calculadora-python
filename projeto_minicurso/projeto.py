@@ -7,11 +7,19 @@ tabela_vendas = pd.read_excel("C:/Users/aspdiogo/Documents/workspace/projeto_min
 #visualizar base de dados 
 
 pd.set_option('display.max_columns', None)
-print(tabela_vendas)
+
 
 #faturamento por loja 
 
+faturamento = tabela_vendas[['ID Loja','Valor Final']].groupby('ID Loja').sum()
+
+print(faturamento)
+
 #quantidade de produtos por loja
+
+Quant_D_Produtos = tabela_vendas[['ID Loja','Quantidade']].groupby('ID Loja').sum()
+
+print(Quant_D_Produtos)
 
 #ticket médio por produto em cada loja
 
