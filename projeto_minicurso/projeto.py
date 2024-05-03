@@ -17,10 +17,14 @@ print(faturamento)
 
 #quantidade de produtos por loja
 
-Quant_D_Produtos = tabela_vendas[['ID Loja','Quantidade']].groupby('ID Loja').sum()
+Quantidade = tabela_vendas[['ID Loja','Quantidade']].groupby('ID Loja').sum()
 
-print(Quant_D_Produtos)
+print(Quantidade)
 
 #ticket médio por produto em cada loja
+
+ticket_medio = (faturamento['Valor Final'] / Quantidade['Quantidade']).to_frame()
+
+print(ticket_medio)
 
 #enviar email com relatório
